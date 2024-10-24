@@ -169,6 +169,169 @@ WooCommerce comes with some sample data you can use to see how products look; im
 
 == Changelog ==
 
-= 9.5.0 2024-XX-XX =
+= 9.5.0 2024-11-12 =
+
+**WooCommerce**
+
+* Fix - Accessibility: Prevent shipping losing focus when making selections during checkout.
+* Fix - Avoid Product Search Results block template to fall back to the Product Catalog template from the theme
+* Fix - Changed from using React.render to React.createRoot for product editor areas as it has been deprecated since React 18
+* Fix - Correctly escape the HTML when linking customer orders.
+* Fix - CYS - Remove the site title block length from the "Large Header" and the "Centered Menu Header".
+* Fix - CYS: Disable readonly mode only when full composability feature flag is enabled.
+* Fix - CYS: fix: Assembler follows admin color schema.
+* Fix - CYS: fix flickering effect.
+* Fix - CYS: fix logic to disable click on the no block placeholder
+* Fix - CYS: Fix pattern rendering issues
+* Fix - CYS: fix pattern wrapped twice by group blocks
+* Fix - CYS: fix shuffle feature logic.
+* Fix - CYS: fix the default intro pattern.
+* Fix - CYS: fix toolbar position after the site preview resizes
+* Fix - CYS: hide button to resize the image
+* Fix - CYS: open Intro panel when user clicks on Design your homepage
+* Fix - Display "View store" button text by default in the toolbar.
+* Fix - Do not set the `tk_ai` tracking cookie if tracking is disabled.
+* Fix - Exclude simple products from variations reports by default.
+* Fix - Fetch site cache status correctly if directly navigating to LYS Success page, and some refactoring
+* Fix - Fix add zone button flinching and vertical centering
+* Fix - Fix confusing messages prompting switch to classic templates
+* Fix - Fixed "woocommerce_new_order" triggering on checkout blocks page visit.
+* Fix - Fixed a bug causing account email not to be taken in consideration for coupon validation when a customer has a different billing email set.
+* Fix - Fixed a bug where the close button is not visible on the mini cart when viewed on a mobile device
+* Fix - Fix fatal error in order reports when parent order doesn't exist
+* Fix - Fix get_options deprecated notice when viewing Analytics > Orders
+* Fix - Fix Order Count inconsistency between stats and reports
+* Fix - Fix site coming soon page heading color
+* Fix - Fix the mini cart items not being visible when zoomed in
+* Fix - Fix the namespace of the RestApiControllerBase class
+* Fix - Issue fixed where tags are overlapping divider line in "Filter by product category".
+* Fix - Made coupon fields during block checkout stack on smaller screen sizes
+* Fix - Make sure the correct block template file is used in the Site Editor for templates with fallback
+* Fix - Make the Leaderboards on the Analytics > Dashboard page use consistent currency and number formatting across the page, and perceive the currency setting comes from the relevant filter.
+* Fix - Narrowed scope of block theme notice templates so other template overrides are unaffected
+* Fix - Prevent download permissions metabox from being toggled when toggling individual permission details.
+* Fix - Prevent product editor styles loading on non wc-admin pages
+* Fix - Product Collection: Fix alignment of the first item in Grid layout for WP 6.6
+* Fix - Product Collection: Fix the Preview badge's corner radius
+* Fix - Product Collection: Show "Sync with current query" option only in archive templates where it makes sense
+* Fix - Provide more informative errors if a refund cannot be requested via the REST API, due to plugin conflicts.
+* Fix - Removes several side effects in the code bases that caused translations to be loaded too early.
+* Fix - Update allowed statuses in legacy payment handler for checkout block.
+* Add - Add a rest api to manage the product custom fields
+* Add - Added notice to the order confirmation page for new accounts instructing them to change the default password.
+* Add - Add global unique ID field to the classic product editor
+* Add - Adds global_unique_id field to product and product variations
+* Add - Add validation for `__experimentalRegisterProductCollection` arguments
+* Add - CYS: add badge that informs how many patterns have been inserted from each category.
+* Add - CYS: Add default patterns.
+* Add - Expose __experimentalRegisterProductCollection in @woocommerce/blocks-registry Package
+* Add - Improvements in the handling of feature compatibility for plugins
+* Update - Add a link to the Theming docs from the blockified templates README.md file
+* Update - Add a new icon style to the "Customer Account" block.
+* Update - Adds setting to control the visibility of product count in Mini cart block
+* Update - CYS - Add borders to footer and header patterns on the assembler.
+* Update - CYS - Add missing patterns to their categories for the assembler
+* Update - CYS - Fetch patterns from the private dotcom patterns category instead of from the default source site.
+* Update - CYS - Fetch patterns from the WooCommerce PTK source site.
+* Update - CYS - Filter out patterns with external dependencies.
+* Update - CYS - Fix CSS spacing issues in the assembler.
+* Update - CYS - Fix dark patterns buttons color.
+* Update - CYS - Fix the font size of the "DON'T HAVE A LOGO YET?" title.
+* Update - CYS - Fix the intro cards size to match the designs.
+* Update - CYS - Fix the pattern preview border color on hover and for inserted patterns.
+* Update - CYS - Improve margins for CYS core patterns.
+* Update - CYS - Improve the designs of the Intro page bottom cards.
+* Update - CYS - Include the dotcom patterns from the "Reviews" category.
+* Update - CYS - Make some titles bold on CYS patterns.
+* Update - CYS - Register PTK "Testimonials" patterns as "Reviews"
+* Update - CYS - Remove non-default patterns and register them from the PTK. Update margins.
+* Update - CYS - Update pattern categories and its descriptions.
+* Update - CYS - Update pattern toolbar delete button copy to `Delete`.
+* Update - CYS: Add `rel="noreferrer"` to External Fiverr Link in sidebar of **Add your logo** screen.
+* Update - CYS: Improve Block Toolbar logic.
+* Update - CYS: improve copy no blocks placeholder.
+* Update - CYS: no highlight the pattern when it is added.
+* Update - CYS: Remove not necessary patterns.
+* Update - CYS: Revisit sidebar layout.
+* Update - CYS: Update Block Toolbar Position
+* Update - CYS: Update icon used by the "Customer account" block into header patterns
+* Update - CYS: Update sidebar homepage copy
+* Update - CYS: Update verbiage in the CTA to our Fiverr Logo Maker landing page.
+* Update - CYS: when the footer/header is clicked, the border color is blue.
+* Update - E2E: check the `Add` button when creating product variations in the new Product Editor
+* Update - E2E: in the new Product Editor app, update how to detect when global attributes are loaded.
+* Update - E2E: remove UI check when creating attribute global terms
+* Update - Ensures the product ID is valid when interacting with product variations via the REST API.
+* Update - Ensuring product creation with unique sku for concurrent requests
+* Update - Fix: Show preview label only when Product Collection block is selected
+* Update - Fix Classic Template block registration on WP 6.6
+* Update - Improve the handling of the deprecated WC()->api property
+* Update - Make proceed to order button non sticky when zoom level is bigger than 100%
+* Update - Make Single Product gallery thumbnail images sharper by defining a srcset
+* Update - preparing checkout blocks docs for dev docs site
+* Update - Product Editor: improve E2E tests. Test the `+3 More` item label in the Organization tab
+* Update - Product Editor: restore and fix E2E test that creates product variations
+* Update - Product Editor: restore Product (local) Attributes E2E test
+* Update - Product Editor: update create product variations E2E test
+* Update - Redesigned the Product Collection block's insertion journey.
+* Update - Return HTTP 404 for REST API requests involving non-existing tax class.
+* Update - Return HTTP 404 when accessing non-existent webhooks via REST API.
+* Update - Updated account settings descriptions for added clarity
+* Update - Update Settings to disable Save button unless modifications are made.  #### Comment <!-- If the changes in this pull request don't warrant a changelog entry, you can alternatively supply a comment here. Note that comments are only accepted with a significance of "Patch" -->
+* Update - Update shipping method setup modal copy if the block-based local pickup is enabled
+* Update - Update Store Alert widths to match main body
+* Update - Update WC Tasks in the WC Home. Rename to WooCommerce marketplace, add new browse marketplace, remove connect to woocomerce.com from inbox
+* Dev - Add Allure to Blocks e2e tests
+* Dev - Add daily checks for core e2e with PHP 8.1 and WP latest-1
+* Dev - Add support for e2e testing against external sites in CI
+* Dev - Build: speedup dependencies installation by disabling composer optimize autoloading by default.
+* Dev - CI: buffix for linting missing strict types directive.
+* Dev - CI: code style fixes to pass linting in updated CI environment.
+* Dev - CI: reduce running time for PHPUnit related jobs.
+* Dev - CI: tuning deps caching for playwright.
+* Dev - Create a separate JS cart and checkout JavaScript bundle to improve performance.
+* Dev - CYS - Fix the "test_fetch_patterns_should_register_testimonials_category_as_reviews" tests.
+* Dev - Dropping select2 and point it to SelectWoo
+* Dev - E2E tests: fix failing settings-tax e2e test
+* Dev - E2E tests: Fix flaky account email receiving test
+* Dev - E2E tests: Fix flaky connect to Woo.com test
+* Dev - E2E tests: Fix flaky filling regular price in the inventory tab
+* Dev - E2E tests: Fix flaky filling SKU field and CYS footer
+* Dev - E2E tests: Fix flaky Gutenberg, WC Services tests
+* Dev - E2E tests: Fix flaky Gutenberg tests
+* Dev - E2E tests: Fix flaky merchant filling sku field in the new editor
+* Dev - E2E tests: Fix merchant settings general test
+* Dev - E2E tests: tag different envs in e2e test suite to run in workflows
+* Dev - Final sanity check to make sure attributes are done saving
+* Dev - Fix broken syntax in e2e-guidelines.md.
+* Dev - Lint new PHP files for strict types directive
+* Dev - Minor tooling tweaks (zip compression level, composer invocation)
+* Dev - Move buildkite-test-collector to devDependencies
+* Dev - move docs out of main folder until subcategories are ready
+* Dev - Product Collection: add tracking for block usage
+* Dev - Remove performance tests from PR checks (leave on push to trunk)
+* Dev - Switch `render()` to `createRoot().render()` to use React 18 features.
+* Dev - Tweaks related to caching Composer dependecies and Playwright downloads in CI.
+* Dev - Update a few e2e tests failing on the daily run
+* Dev - Update all values to be random so that retries don't fail on assertions
+* Dev - Updated CodeSniffer configuration to address conflicting rules.
+* Dev - Update Playwright from 1.44 to 1.45
+* Tweak - Add $wpdb->esc_like to the search criteria when searching for a product custom field name
+* Tweak - Add the initially installed WooCommerce version to the wp_options table
+* Tweak - Exclude coming soon patterns from block inserter
+* Tweak - Get tax line label instead of name in StoreAPI Order endpoint.
+* Tweak - Improve checks when offering to remove test orders
+* Tweak - Initialize BlockTemplatesController for block themes only.
+* Tweak - Remove enctype from verify email form
+* Tweak - Remove unneeded IE styling as IE is no longer supported
+* Tweak - Update the "API enabled" entry in the System Status Report to clarify that it pertains to the Legacy REST API.
+* Performance - Load REST API namespaces only when needed.
+* Enhancement - Add required indication to login forms
+* Enhancement - Allow blocks with parents in the "woocommerce" namespace to be added to the Checkout block without requiring them to be added to the "__experimental_woocommerce_blocks_add_data_attributes_to_block" hook.
+* Enhancement - CYS: make the entire shuffle section clickable.
+* Enhancement - CYS: Remove iframe animation
+* Enhancement - Made the "return to cart" link (in the checkout block) hidden by default.
+* Enhancement - Provide the location context within the Product Collection block context
+
 
 [See changelog for all versions](https://raw.githubusercontent.com/woocommerce/woocommerce/trunk/changelog.txt).
